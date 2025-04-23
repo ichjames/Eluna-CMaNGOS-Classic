@@ -1869,7 +1869,7 @@ void Spell::EffectPowerDrain(SpellEffectIndex eff_idx)
         return;
     if (!unitTarget->IsAlive())
         return;
-    if (unitTarget->GetPowerType() != powerType)
+    if (unitTarget->GetPowerType() != powerType && powerType != POWER_HAPPINESS)
         return;
     if (damage < 0)
         return;
